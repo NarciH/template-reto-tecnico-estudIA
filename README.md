@@ -1,15 +1,20 @@
-
 # Reto Técnico Empresarial con Inteligencia Artificial
 
 ## 1. Definición y Enfoque del Problema
 El objetivo de este proyecto es resolver un problema empresarial específico mediante el uso de técnicas de Inteligencia Artificial. 
 El problema abordado incluye desafíos como [DESCRIBIR EL PROBLEMA]. La solución propuesta busca [OBJETIVO PRINCIPAL].
 
+### Proyecto de Pronóstico de Ventas
+Este proyecto tiene como objetivo desarrollar un modelo de pronóstico de ventas para un negocio minorista. Utilizando datos históricos de ventas, el modelo predecirá las ventas futuras, ayudando a la empresa a tomar decisiones informadas sobre inventario, marketing y planificación de recursos.
+
 ## 2. Solución Técnica
 
 ### Modelos y Algoritmos
 - Implementación de modelos basados en [MODELO ESPECÍFICO, EJ: REGRESIÓN, CNN, ETC.].
 - Justificación técnica de la elección del modelo.
+
+### Modelo de Pronóstico de Ventas
+El modelo de pronóstico de ventas se basa en una red neuronal recurrente (RNN) utilizando Long Short-Term Memory (LSTM). Esta arquitectura es adecuada para manejar datos de series temporales y capturar patrones a largo plazo en los datos de ventas.
 
 ### Desempeño del Modelo
 - Métricas de evaluación utilizadas: `accuracy`, `precision`, `recall`, u otras relevantes.
@@ -49,4 +54,23 @@ El problema abordado incluye desafíos como [DESCRIBIR EL PROBLEMA]. La solució
     ```
 
 4. Los resultados se generarán en la carpeta `outputs`.
+
+### Instrucciones para Ejecutar el Proyecto de Pronóstico de Ventas
+
+1. Clona este repositorio o descarga el archivo ZIP.
+2. Crea y activa el entorno virtual:
+    ```bash
+    python -m venv .venv
+    source .venv/bin/activate  # En Windows usa `.venv\Scripts\activate`
+    ```
+3. Instala las dependencias desde el archivo `requirements.txt`:
+    ```bash
+    pip install -r requirements.txt
+    ```
+4. Coloca los datos históricos de ventas en la carpeta `data`.
+5. Ejecuta el pipeline desde el script principal:
+    ```bash
+    python src/main.py
+    ```
+6. Los resultados generados se almacenarán en la carpeta `outputs`.
 

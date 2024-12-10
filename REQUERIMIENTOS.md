@@ -86,7 +86,6 @@ La solución debe incorporar pasos automatizados para el pipeline de datos y el 
 
 #### Descripción General
 Este proyecto está diseñado para resolver un problema técnico empresarial utilizando técnicas de Inteligencia Artificial. La estructura facilita la organización de datos, scripts, modelos y resultados para asegurar un flujo de trabajo eficiente y reproducible.
-
 #### Estructura de Carpetas
 
 ```
@@ -102,6 +101,8 @@ Reto_Tecnico_IA/
 │   ├── evaluation.py   # Script para evaluar el modelo
 ├── models/             # Carpeta para almacenar los modelos entrenados
 ├── outputs/            # Carpeta para los resultados y visualizaciones
+├── kerastuner/         # Carpeta para almacenar configuraciones y resultados de Keras Tuner
+├── tensorboard/        # Carpeta para almacenar logs de TensorBoard
 ├── .env                # Archivo para secretos y credenciales
 ├── .gitignore          # Archivo para ignorar archivos y carpetas en Git
 ├── README.md           # Documentación del proyecto
