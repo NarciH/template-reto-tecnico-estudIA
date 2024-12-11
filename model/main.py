@@ -2,9 +2,9 @@
 # Script principal para ejecutar el pipeline del proyecto
 
 import pandas as pd
-from preprocessing import clean_data
-from training import train_model
-from evaluation import evaluate_model
+from model.preprocessing import clean_data
+from model.training import train_model
+from model.evaluation import evaluate_model
 
 def main():
     print("Bienvenido al Reto Técnico Empresarial con IA")
