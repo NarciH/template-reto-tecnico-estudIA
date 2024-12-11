@@ -94,15 +94,17 @@ Reto_Tecnico_IA/
 ├── .venv/              # Entorno virtual para las dependencias del proyecto
 ├── data/               # Carpeta para almacenar datos sin procesar y procesados
 ├── notebooks/          # Carpeta para notebooks exploratorios
-├── src/                # Carpeta para scripts principales
-│   ├── main.py         # Script principal para ejecutar el pipeline
-│   ├── preprocessing.py # Script para limpieza y preprocesamiento de datos
-│   ├── training.py     # Script para entrenar el modelo
-│   ├── evaluation.py   # Script para evaluar el modelo
+├── src/                # Carpeta principal para scripts
+│   ├── api/            # Carpeta para la API
+│   │   ├── main.py     # Script principal de FastAPI
+│   ├── model/          # Carpeta para scripts del modelo
+│   │   ├── estimator.py # Script para estimadores del modelo
+│   │   ├── evaluation.py # Script para evaluación del modelo
+│   │   ├── main.py     # Script principal para ejecutar el pipeline
+│   │   ├── preprocessing.py # Script para preprocesamiento de datos
+│   │   ├── training.py # Script para entrenamiento del modelo
 ├── models/             # Carpeta para almacenar los modelos entrenados
 ├── outputs/            # Carpeta para los resultados y visualizaciones
-├── kerastuner/         # Carpeta para almacenar configuraciones y resultados de Keras Tuner
-├── tensorboard/        # Carpeta para almacenar logs de TensorBoard
 ├── .env                # Archivo para secretos y credenciales
 ├── .gitignore          # Archivo para ignorar archivos y carpetas en Git
 ├── README.md           # Documentación del proyecto
@@ -111,28 +113,34 @@ Reto_Tecnico_IA/
 
 #### Archivos Principales
 
-##### 1. **`src/main.py`**
-Este script es el punto de entrada principal para ejecutar el pipeline del proyecto. Su propósito es coordinar las tareas de preprocesamiento, entrenamiento y evaluación.
+##### 1. **`src/api/main.py`**
+Este script es el punto de entrada principal para la API utilizando FastAPI. Esta es una aplicación de escalabilidad del proyecto en cuanto a despliegues. Su uso es poder utilizar el modelo para estimar.
 
-##### 2. **`src/preprocessing.py`**
-Este módulo contiene las funciones para la limpieza y preprocesamiento de datos.
+##### 2. **`src/model/estimator.py`**
+Este módulo contiene las funciones para los estimadores del modelo.
 
-##### 3. **`src/training.py`**
-Este módulo gestiona el entrenamiento del modelo con los datos procesados.
-
-##### 4. **`src/evaluation.py`**
+##### 3. **`src/model/evaluation.py`**
 Este módulo realiza la evaluación del modelo entrenado, generando métricas y reportes.
 
-##### 5. **`requirements.txt`**
+##### 4. **`src/model/main.py`**
+Este script es el punto de entrada principal para ejecutar el pipeline del proyecto. Su propósito es coordinar las tareas de preprocesamiento, entrenamiento y evaluación.
+
+##### 5. **`src/model/preprocessing.py`**
+Este módulo contiene las funciones para el preprocesamiento de datos.
+
+##### 6. **`src/model/training.py`**
+Este módulo gestiona el entrenamiento del modelo con los datos procesados.
+
+##### 7. **`requirements.txt`**
 Lista de dependencias necesarias para ejecutar el proyecto.
 
-##### 6. **`.env`**
+##### 8. **`.env`**
 Archivo para almacenar secretos y credenciales necesarios para el proyecto.
 
-##### 7. **`.gitignore`**
+##### 9. **`.gitignore`**
 Archivo para especificar qué archivos y directorios deben ser ignorados por Git.
 
-##### 8. **`README.md`**
+##### 10. **`README.md`**
 Para facilitar la creación de un archivo `README.md` efectivo y profesional, se recomienda utilizar plantillas disponibles en [Readme Templates](https://www.readme-templates.com/). Estas plantillas proporcionan una estructura clara y completa que puede ser adaptada a las necesidades específicas de tu proyecto.
 
 #### Cómo Ejecutar
